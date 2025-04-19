@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-box {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Registration</h2>
+    <form onsubmit="showPopup(event)">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Address</label>
+        <textarea rows="2" placeholder="Enter address" required></textarea>
+
+        <label>Blood Group</label>
+        <select required>
+            <option value="">Select</option>
+            <option>A+</option>
+            <option>B+</option>
+            <option>O+</option>
+            <option>AB+</option>
+            <option>A-</option>
+            <option>B-</option>
+            <option>O-</option>
+            <option>AB-</option>
+        </select>
+
+        <label>College Name</label>
+        <input type="text" placeholder="Enter college name" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function showPopup(event) {
+        event.preventDefault(); // prevent real submission
+        alert("✅ Successfully submitted!");
+    }
+</script>
+
+</body>
+</html>
